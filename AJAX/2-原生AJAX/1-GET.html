@@ -1,0 +1,50 @@
+<!--
+ * @Author: zsc
+ * @Date: 2022-04-12 11:02:22
+ * @LastEditors: zhaoshuchen
+ * @LastEditTime: 2022-04-15 16:22:26
+ * @Description: file content
+ * @FilePath: /Ajax/2/1-GET.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax GET请求</title>
+    <script type=""></script>
+</head>
+
+<body>
+    <button>click to send request</button>
+    <div id="result"></div>
+</body>
+
+<script>
+    const btn = document.getElementsByTagName("button")[0];
+    const result = document.getElementById("result");
+    btn.onclick = function() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://127.0.0.1:8000/server?a=100&b=200"); //传参
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) { //服务端返回了所有结果
+                if (xhr.status >= 200 & xhr.status < 300) {
+                    result.innerHTML = xhr.response;
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    #result {
+        width: 200px;
+        height: 100px;
+        border: solid 1px #909090;
+    }
+</style>
+
+</html>

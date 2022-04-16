@@ -1,0 +1,46 @@
+<!--
+ * @Author: zhaoshuchen
+ * @Date: 2022-04-16 11:54:47
+ * @LastEditors: zhaoshuchen
+ * @LastEditTime: 2022-04-16 14:12:19
+ * @FilePath: /Ajax/2-原生AJAX/5-取消请求与重复发送请求.html
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel and repeatly send request</title>
+</head>
+
+<body>
+    <button>click to send</button>
+    <button>click to cancel</button>
+</body>
+
+<script>
+    const btns = document.getElementsByTagName("button")
+    let x = null;
+    let isSending = false;
+
+    btns[0].onclick = () => {
+        if (isSending) x.abort();
+        x = new XMLHttpRequest();
+        isSending = true;
+        x.open("GET", "http://127.0.0.1:8000/delay");
+        x.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                isSending = false;
+            }
+        }
+    };
+    btns[1].onclick = () => {
+        x.abort();
+    };
+</script>
+
+</html>

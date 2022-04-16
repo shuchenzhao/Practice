@@ -1,0 +1,47 @@
+<!--
+ * @Author: zhaoshuchen
+ * @Date: 2022-04-16 16:26:23
+ * @LastEditors: zhaoshuchen
+ * @LastEditTime: 2022-04-16 19:44:08
+ * @FilePath: /Ajax/4-axios发送AJAX/axios.html
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios-AJAX</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <button>GET</button>
+    <button>POST</button>
+    <button>AJAX</button>
+</body>
+<script>
+    const btns = document.querySelectorAll("button");
+
+    axios.default.baseURL = "http://127.0.0.1:8000";
+
+    btns[0].onclick = () => {
+        axios.get("/axios", {
+            params: {
+                a: 100,
+                b: 200
+            },
+            headers: {
+                name: zhaoshuchen
+            }
+        }).then(value => {
+            console.log(value);
+        });
+    };
+
+    //数据返回，jQuery使用回调函数，axios是基于Promise的
+</script>
+
+</html>
