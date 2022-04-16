@@ -1,0 +1,118 @@
+<!--
+ * @Author: zsc
+ * @Date: 2022-03-05 15:46:47
+ * @LastEditors: zsc
+ * @LastEditTime: 2022-03-05 15:49:19
+ * @Description: file content
+ * @FilePath: \undefinedc:\Users\赵书晨\Desktop\Practice\demo\CSS布局\flex布局实例\响应式图库.html
+-->
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    /* 创建并排的四个等列 */
+    
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+    /* 响应式布局 - 创建两列而不是四列布局 */
+    
+    @media (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    /* 响应式布局 - 创建上下堆叠而不是并排的两列布局 */
+    
+    @media (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>响应式图像网格</h1>
+        <p>请调整浏览器窗口，来查看响应效果。</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="/i/photo/tulip-red.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow-2.jpg" style="width:100%">
+            <img src="/i/photo/flower-2.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow.jpg" style="width:100%">
+            <img src="/i/photo/flower-3.jpg" style="width:100%">
+            <img src="/i/photo/tulip.jpg" style="width:100%">
+            <img src="/i/photo/flower-1.jpg" style="width:100%">
+            <img src="/i/photo/flower-4.jpg" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="/i/photo/tulip-yellow-2.jpg" style="width:100%">
+            <img src="/i/photo/tulip.jpg" style="width:100%">
+            <img src="/i/photo/flower-3.jpg" style="width:100%">
+            <img src="/i/photo/flower-1.jpg" style="width:100%">
+            <img src="/i/photo/flower-4.jpg" style="width:100%">
+            <img src="/i/photo/tulip-red.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow.jpg" style="width:100%">
+            <img src="/i/photo/flower-2.jpg" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="/i/photo/tulip-red.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow-2.jpg" style="width:100%">
+            <img src="/i/photo/flower-2.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow.jpg" style="width:100%">
+            <img src="/i/photo/flower-3.jpg" style="width:100%">
+            <img src="/i/photo/tulip.jpg" style="width:100%">
+            <img src="/i/photo/flower-1.jpg" style="width:100%">
+            <img src="/i/photo/flower-4.jpg" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="/i/photo/tulip-yellow-2.jpg" style="width:100%">
+            <img src="/i/photo/tulip.jpg" style="width:100%">
+            <img src="/i/photo/flower-3.jpg" style="width:100%">
+            <img src="/i/photo/flower-1.jpg" style="width:100%">
+            <img src="/i/photo/flower-4.jpg" style="width:100%">
+            <img src="/i/photo/tulip-red.jpg" style="width:100%">
+            <img src="/i/photo/tulip-yellow.jpg" style="width:100%">
+            <img src="/i/photo/flower-2.jpg" style="width:100%">
+        </div>
+    </div>
+
+</body>
+
+</html>

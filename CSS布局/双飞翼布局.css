@@ -1,0 +1,35 @@
+.header,
+.footer {
+    background-color: antiquewhite
+}
+
+.left,
+.right {
+    float: left;
+}
+
+.footer {
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    float: left;
+}
+
+.center {
+    background-color: blueviolet;
+    margin: 0 100px;
+}
+
+.left {
+    background-color: aqua;
+    width: 100px;
+    margin-left: -100%;
+}
+
+.right {
+    background-color: aquamarine;
+    width: 100px;
+    margin-left: -100px;
+}

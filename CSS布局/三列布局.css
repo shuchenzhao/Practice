@@ -1,0 +1,147 @@
+/*前提：左右宽度为300px，高度为100px，中间宽度自适应*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 1.float */
+
+
+/* 
+.left {
+    background-color: antiquewhite;
+    height: 100px;
+    width: 300px;
+    float: left;
+}
+
+.right {
+    background-color: antiquewhite;
+    height: 100px;
+    width: 300px;
+    float: right;
+}
+
+.center {
+    background-color: aquamarine;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.center::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+*/
+
+
+/* 2.position */
+
+
+/* 
+.main {
+    position: relative;
+}
+
+.left,
+.center,
+.right {
+    position: absolute;
+}
+
+.left {
+    background-color: antiquewhite;
+    width: 300px;
+    left: 0;
+}
+
+.center {
+    background-color: aquamarine;
+    left: 300px;
+    right: 300px;
+}
+
+.right {
+    background-color: antiquewhite;
+    width: 300px;
+    right: 0;
+}
+*/
+
+
+/* 3.table */
+
+
+/* 
+.main {
+    display: table;
+    width: 100%;
+}
+
+.left,
+.center,
+.right {
+    display: table-cell;
+}
+
+.left,
+.right {
+    width: 300px;
+    background-color: antiquewhite;
+}
+
+.center {
+    background-color: aquamarine;
+}
+*/
+
+
+/* 4.flex */
+
+
+/* 
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.left,
+.right {
+    background-color: antiquewhite;
+    width: 300px;
+}
+
+.center {
+    background-color: aquamarine;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+*/
+
+
+/* 5. grid */
+
+
+/* 
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 300px auto 300px;
+}
+
+.left,
+.right {
+    background-color: antiquewhite;
+}
+
+.center {
+    background-color: aquamarine;
+}
+*/
